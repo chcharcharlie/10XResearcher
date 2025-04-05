@@ -98,7 +98,13 @@ During each Discussion phase:
 4. Identify specific action items in action_items.md
 5. Formulate initial hypotheses in hypotheses.md
 6. Create a preliminary research plan
-7. Propose transition to Research phase when ready
+7. Propose transition to Research phase when any of these conditions are met:
+   - Sufficient clarity on research scope and objectives has been achieved
+   - The research scope is substantial enough to warrant a dedicated research phase
+   - Further progress requires external information that cannot be determined through discussion alone
+   - Specific hypotheses need validation with factual data
+   - Key uncertainties have been identified that require investigation
+   - The discussion has revealed knowledge gaps that need to be filled with research
 
 ### 3. Research Phase (PhaseR#)
 
