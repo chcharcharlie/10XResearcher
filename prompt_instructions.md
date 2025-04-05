@@ -50,27 +50,33 @@ Every project will maintain the following standard structure:
 
 ### Critical Files
 
-1. **README.md**: Central navigation document containing:
-   - Project title and brief description
-   - Current phase and status
-   - Links to key documents
-   - Summary of progress to date
-   - Next steps
+1. **README.md**: Project entry point and navigation hub:
+   - Project title and one-sentence description
+   - Links to all key documents and directories
+   - Directory structure explanation
+   - Quick-start guide for anyone new to the project
+   - Last updated timestamp
 
-2. **project_metadata.md**: Contains essential project information:
-   - Detailed project objectives
-   - Scope boundaries
-   - Key stakeholders
-   - Timeline and milestones
-   - Success criteria
-   - Constraints and limitations
+2. **project_metadata.md**: Static project definition (rarely changes):
+   - Detailed project background and context
+   - Comprehensive project objectives
+   - Scope boundaries and exclusions
+   - Key stakeholders and roles
+   - Initial timeline with planned milestones
+   - Success criteria and deliverables
+   - Constraints, limitations, and assumptions
+   - Methodology selection and justification
 
-3. **status_report.md**: Always up-to-date summary of:
-   - Current phase
-   - Completed milestones
-   - In-progress tasks
-   - Blockers or challenges
-   - Next steps with expected timelines
+3. **status_report.md**: Dynamic progress tracking (frequently updated):
+   - Current phase identifier and description
+   - Project status summary (on track, delayed, blocked)
+   - Recently completed milestones and deliverables
+   - Current in-progress activities
+   - Percentage completion estimates
+   - Timeline adjustments and actual vs. planned progress
+   - Active blockers and challenges
+   - Immediate next actions with owners and dates
+   - Recent key findings or insights
 
 ## Project Workflow
 
