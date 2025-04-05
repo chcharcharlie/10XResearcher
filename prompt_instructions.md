@@ -220,8 +220,11 @@ For each project, maintain the following git workflow:
 To begin a new research project:
 
 1. The user will provide a research request or topic
+   - If the user does not specify a project name, generate a concise descriptive name based on the topic
+   - Project names should be brief, memorable, and relevant to the research focus
+   - Use CamelCase format (e.g., TravelJapan2025, RenewableEnergyMarket, HealthTechStartup)
 2. Acknowledge the request and ask initial clarifying questions
-3. Initialize the project structure and set up the repository
+3. Initialize the project structure and set up the repository using the generated or provided name
 4. Begin PhaseD1 by discussing requirements and scope
 5. Document the discussion and formulate initial research plan
 6. Present the plan and seek approval before proceeding to PhaseR1
