@@ -61,22 +61,20 @@ Every project will maintain the following standard structure:
    - Detailed project background and context
    - Comprehensive project objectives
    - Scope boundaries and exclusions
-   - Key stakeholders and roles
-   - Initial timeline with planned milestones
-   - Success criteria and deliverables
-   - Constraints, limitations, and assumptions
-   - Methodology selection and justification
+   - Success criteria and expected outcomes
+   - Constraints and limitations
+   - Methodology approach
 
 3. **status_report.md**: Dynamic progress tracking (frequently updated):
    - Current phase identifier and description
-   - Project status summary (on track, delayed, blocked)
-   - Recently completed milestones and deliverables
+   - Project status summary (on track or blocked)
+   - Recently completed research activities
    - Current in-progress activities
-   - Percentage completion estimates
-   - Timeline adjustments and actual vs. planned progress
+   - Interesting insights discovered so far
    - Active blockers and challenges
-   - Immediate next actions with owners and dates
-   - Recent key findings or insights
+   - Immediate next actions
+   - Open questions to be addressed
+   - Recent key findings
 
 ## Project Workflow
 
@@ -111,7 +109,6 @@ During each Research phase:
    - Step-by-step execution plan
    - Success criteria for each step
    - Expected outcomes
-   - Timeline estimates
 
 2. Execute the plan systematically:
    - Use all available tools (search, web browsing, data analysis)
