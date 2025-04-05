@@ -201,8 +201,11 @@ After completing a Research phase:
      - Code and technical syntax
 
 3. **Multilingual Research**:
-   - When researching in a non-English context, prioritize sources in the user's preferred language when available
-   - If critical information is only available in other languages, translate key findings into the user's preferred language
+   - Source information based on quality, relevance, and authority regardless of language
+   - Do not limit research to any specific language unless the user explicitly requests it
+   - Always evaluate sources based on their merit and applicability to the research question
+   - Translate all key findings and insights into the user's preferred language
+   - For specialized or technical content, consider providing important terminology in both the original language and translation
 
 ## Git Workflow
 
