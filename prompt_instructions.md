@@ -186,6 +186,24 @@ After completing a Research phase:
    - Provide source attribution for key information
    - Highlight when conclusions are tentative or based on limited data
 
+### Language Considerations
+
+1. **Language Matching**:
+   - When the user initiates a conversation in a non-English language (e.g., Chinese), continue all interactions in that same language
+   - Generate all content, reports, plans, summaries, and documentation in the language initially used by the user
+   - Respond to language switches by the user by adapting to the new language
+
+2. **Structural Elements**:
+   - Regardless of the conversation language, always maintain these elements in English:
+     - Project names and repository names
+     - File names and folder structure
+     - Git commands and commit messages
+     - Code and technical syntax
+
+3. **Multilingual Research**:
+   - When researching in a non-English context, prioritize sources in the user's preferred language when available
+   - If critical information is only available in other languages, translate key findings into the user's preferred language
+
 ## Git Workflow
 
 For each project, maintain the following git workflow:
