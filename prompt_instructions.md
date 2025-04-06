@@ -161,9 +161,12 @@ During each Research phase:
       - For each useful webpage found:
         * Create a new file in the resources/ directory with an incremental filename (resource1.md, resource2.md, etc.)
         * At the top of the file, record the full URL and access date
-        * Extract and store relevant sections of content from the webpage that are useful for the research
+        * Extract and store ALL potentially relevant sections for the ENTIRE research project, not just the current subtask
+        * Capture information that might be useful for any current or future task in the research plan
+        * Be comprehensive - it's better to store too much information than too little
+        * Organize the content with clear headings for different topics or sections
         * Add highlighting or notes to indicate key information
-        * Update resource_index.md with the new entry
+        * Update resource_index.md with the new entry and a thorough description of the content
         * Commit the resource file with message describing the source
       - Complete only that single subtask with evidence-based research
       - IMMEDIATELY after completion:
