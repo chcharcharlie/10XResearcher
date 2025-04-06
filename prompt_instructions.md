@@ -265,8 +265,8 @@ During each Research phase:
         * Organize the content with clear headings for different topics or sections
         * Add highlighting or notes to indicate key information
         * Update resource_index.md with the new entry and a thorough description of the content
-        * Each resource file must correspond to EXACTLY ONE webpage/URL
-        * Update research_plan.md to mark the page as stored with its filename:
+        * [MANDATORY ACTION] Each resource file must correspond to EXACTLY ONE webpage/URL
+        * [MANDATORY ACTION] Update research_plan.md to mark the page as stored with its filename:
           ```markdown
           - Result 1: [Title] - [URL] - [Accessed: Yes] - [Page Examined: Timestamp] - [Stored as: resource1.md]
           ```
@@ -274,7 +274,7 @@ During each Research phase:
         * Only AFTER saving the resource, continue browsing if needed
       
       - Complete only that single subtask with evidence-based research
-      - IMMEDIATELY after subtask completion:
+      - [MANDATORY ACTION] IMMEDIATELY after subtask completion:
         * Update research_plan.md by changing `- [ ]` to `- [x]` for that specific subtask
         * Add brief outcomes directly under the completed subtask with bullet points
         * Reference specific resource files (not just direct URLs) for EVERY statement or finding
@@ -460,7 +460,7 @@ After completing a Research phase:
     * Try scrolling down as this often triggers additional content to load
     * Only determine a page has failed to load if inspect_page shows minimal or no useful content
     
-  - When encountering content blockers (paywalls, login requirements, cookie consent, bot protection, etc.):
+  - [IMPORTANT NOTE] When encountering content blockers (paywalls, login requirements, cookie consent, bot protection, etc.):
     * DO NOT immediately abandon the page or source
     * ALWAYS check if the page has these limitations before determining a page load has failed
     * Ask the user for assistance: "I've encountered a [specific type] barrier on [website]. Would you like to provide access credentials or should I try an alternative source?"
