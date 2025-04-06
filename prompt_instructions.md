@@ -86,7 +86,8 @@ Every project will maintain the following standard structure:
    - Pages browsed with timestamps
    - Resources stored with corresponding filenames
    - Interruption markers and continuation points
-   - Completion status of each subtask with summary statistics
+
+## Project Workflow
 =======
 
 ## Project Workflow
@@ -122,7 +123,8 @@ When a new research project is requested:
    - DO NOT proceed directly to research
    - START with open-ended questions about goals, expectations, and context
    - EXPLAIN to the user that you'll begin with a discussion phase to understand their needs
-   - EMPHASIZE that this discussion is crucial for effective research outcomes
+
+### 2. Discussion Phase (PhaseD#)
 =======
 
 ### 2. Discussion Phase (PhaseD#)
@@ -455,7 +457,7 @@ After completing a Research phase:
   - Use the element index from the inspection to click on the desired search result
   - If you need to navigate to a URL directly (not from search results), then use go_to_url
   - After visiting a page, always use inspect_page to verify you've reached the correct content
-  - If a page load fails (after checking content and possible blockers), use go_back to return to the search results page before using click_element on another result—otherwise you'll be clicking from an empty page
+  - IMPORTANT: Do not abandon pages that appear to be "stuck loading":
 =======
   - IMPORTANT: Do not abandon pages that appear to be "stuck loading":
     * Many modern websites load content progressively - core content often loads first
