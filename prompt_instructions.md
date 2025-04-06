@@ -39,6 +39,7 @@ Every project will maintain the following standard structure:
 │   └── hypotheses.md             # Preliminary hypotheses and questions
 ├── PhaseR1/                      # Research Phase 1
 │   ├── research_plan.md          # Goals, execution plan with progress tracking
+│   ├── subtask_progress.md       # Detailed tracking of searches, pages, and resources
 │   ├── resources/                # Collected information and references
 │   │   ├── resource_index.md     # Index mapping filenames to URLs
 │   │   ├── resource1.md          # Stored webpage content with URL and relevant sections
@@ -77,6 +78,14 @@ Every project will maintain the following standard structure:
    - Immediate next actions
    - Open questions to be addressed
    - Recent key findings
+
+4. **subtask_progress.md**: Granular tracking of research activities (per research phase):
+   - Google searches conducted with timestamps and queries
+   - Search results examined and their URLs
+   - Pages browsed with timestamps
+   - Resources stored with corresponding filenames
+   - Interruption markers and continuation points
+   - Completion status of each subtask
 
 ## Project Workflow
 
@@ -155,10 +164,31 @@ During each Research phase:
 
    c. For each SUBTASK in sequence:
       - Announce the specific subtask being worked on to the user
+      - Initialize or update a subtask_progress.md file in the research phase directory to track searches and pages visited:
+        ```markdown
+        # Subtask Progress Tracking
+        
+        ## [Subtask Name]
+        
+        ### Google Searches
+        - [Timestamp] Query: "[search query]"
+          - Result 1: [Title] - [URL] - [Accessed: Yes/No]
+          - Result 2: [Title] - [URL] - [Accessed: Yes/No]
+        
+        ### Pages Examined
+        - [Timestamp] [URL] - [Stored: Yes/No] - [Filename if stored]
+        ```
+      
       - Before browsing to a URL, check resource_index.md to see if it's already been accessed
       - If URL exists in index, review the stored resource file instead of browsing again
       - If URL is new, use appropriate external research tools to find factual information
-      - For each useful webpage found:
+      - Record all Google searches conducted and their results in subtask_progress.md
+      
+      - For EACH webpage visited (whether useful or not):
+        * Record the visit in subtask_progress.md with timestamp
+        * Update status_report.md to include the current search queries and pages being examined
+      
+      - IMMEDIATELY after finding a useful webpage (don't wait for subtask completion):
         * Create a new file in the resources/ directory with an incremental filename (resource1.md, resource2.md, etc.)
         * At the top of the file, record the full URL and access date
         * Extract and store ALL potentially relevant sections for the ENTIRE research project, not just the current subtask
@@ -167,32 +197,77 @@ During each Research phase:
         * Organize the content with clear headings for different topics or sections
         * Add highlighting or notes to indicate key information
         * Update resource_index.md with the new entry and a thorough description of the content
-        * Commit the resource file with message describing the source
+        * Update subtask_progress.md to mark the page as stored and include the filename
+        * Commit the resource file with message describing the source: "git add resources/resource*.md resources/resource_index.md && git commit -m '[PhaseR#]: Store resource from [domain] about [topic]'"
+      
       - Complete only that single subtask with evidence-based research
-      - IMMEDIATELY after completion:
+      - IMMEDIATELY after subtask completion:
         * Update research_plan.md by changing `- [ ]` to `- [x]` for that specific subtask
         * Add brief outcomes directly under the completed subtask with bullet points
         * Reference specific resource files (not just direct URLs) for EVERY statement or finding
-        * Commit this change to git with a message describing the completed subtask
+        * Update subtask_progress.md to mark the subtask as complete
+        * Commit these changes to git with a message describing the completed subtask: "git add research_plan.md subtask_progress.md && git commit -m '[PhaseR#]: Complete subtask [number] - [description]'"
       - Inform the user that the subtask has been completed and the plan has been updated
+      - Provide a summary of resources collected during the subtask:
+        * Number of searches conducted
+        * Number of pages examined
+        * Number of resources stored
       - Show the updated subtask to confirm completion
 
    c. Example workflow:
       1. "I'm now working on Subtask 1.1: Find global market valuation and growth rate"
-      2. *completes the research*
-      3. *updates research_plan.md*:
+      2. *initializes subtask_progress.md for tracking*
+      3. *conducts searches and records them*:
+      ```markdown
+      # Subtask Progress Tracking
+      
+      ## Subtask 1.1: Find global market valuation and growth rate
+      
+      ### Google Searches
+      - [2023-12-10 14:35] Query: "global renewable energy market size 2023"
+        - Result 1: IEA Renewables Report - https://example.com/iea - [Accessed: Yes]
+        - Result 2: Bloomberg NEF Market Outlook - https://example.com/bnef - [Accessed: Yes]
+        - Result 3: Energy Market Analysis - https://example.com/analysis - [Accessed: No]
+      
+      ### Pages Examined
+      - [2023-12-10 14:38] https://example.com/iea - [Stored: Yes] - [Filename: resource1.md]
+      - [2023-12-10 14:45] https://example.com/bnef - [Stored: Yes] - [Filename: resource2.md]
+      ```
+      
+      4. *immediately after finding each useful page, stores it in resources/*
+      
+      5. *after completing all research, updates research_plan.md*:
       ```markdown
       - [ ] Task 1: Research market size for renewable energy
         - [x] Subtask 1.1: Find global market valuation and growth rate
           - Found global market valued at $1.1 trillion in 2023 with 8.5% CAGR
-          - Sources: [IEA Global Renewable Report](https://example.com), [Bloomberg NEF](https://example.com)
+          - Sources: [IEA Global Renewable Report](../resources/resource1.md), [Bloomberg NEF](../resources/resource2.md)
         - [ ] Subtask 1.2: Identify regional market distributions
         - [ ] Subtask 1.3: Research forecasted trends through 2030
       ```
-      4. *commits the change*: "git add research_plan.md && git commit -m '[PhaseR1]: Complete subtask 1.1 - Global market valuation'"
-      5. "✅ Subtask 1.1 completed and research plan updated. Moving to Subtask 1.2."
+      6. *commits the changes*: "git add research_plan.md subtask_progress.md && git commit -m '[PhaseR1]: Complete subtask 1.1 - Global market valuation'"
+      7. "✅ Subtask 1.1 completed and research plan updated. During this subtask:
+         - Conducted 1 Google search with 3 results
+         - Examined 2 pages 
+         - Stored 2 resources
+         Moving to Subtask 1.2."
 
-   d. When all subtasks for a main task are complete, update the main task as well:
+   d. Resuming interrupted subtasks:
+      - If a research session is interrupted before a subtask is completed:
+        * Before ending, ensure all current resources and progress are committed
+        * Update subtask_progress.md with a clear "INTERRUPTED" marker and summary of what was done
+      
+      - When resuming an interrupted subtask:
+        * Read subtask_progress.md to identify:
+          - Previous searches conducted
+          - Pages already examined and stored
+          - Progress made before interruption
+        * Summarize the current status to the user
+        * Continue from where the work was interrupted without duplicating efforts
+        * Use the stored resources for reference rather than re-browsing the same pages
+        * If necessary, refresh data from critical sources that may have updated
+
+   e. When all subtasks for a main task are complete, update the main task as well:
       ```markdown
       - [x] Task 1: Research market size for renewable energy
         - [x] Subtask 1.1: Find global market valuation and growth rate
@@ -206,11 +281,21 @@ During each Research phase:
           - Source: [Industry Outlook Report](https://example.com)
       ```
 
-   c. Update status_report.md after completing a significant milestone (approximately every 3-5 tasks)
+   f. Update status_report.md more frequently:
+      - After completing each subtask, not just major milestones
+      - Include a section on "Recent Research Activities" that summarizes:
+        ```markdown
+        ## Recent Research Activities
+        - Conducted [X] searches on [topics]
+        - Examined [Y] web pages
+        - Stored [Z] resources in the repository
+        - Key sources: [list of most important resources with links to stored files]
+        ```
+      - When a subtask is interrupted, document the state and what remains to be done
    
-   d. NEVER work on multiple tasks simultaneously
+   g. NEVER work on multiple tasks simultaneously
    
-   e. NEVER proceed to the next subtask without completing, documenting, and committing the current subtask
+   h. NEVER proceed to the next subtask without completing, documenting, and committing the current subtask
 
 4. Document findings in findings.md with comprehensive references:
    - For each finding, reference the appropriate resource files stored in the resources/ directory
