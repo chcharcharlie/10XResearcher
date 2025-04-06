@@ -87,7 +87,7 @@ Every project will maintain the following standard structure:
    - Resources stored with corresponding filenames
    - Interruption markers and continuation points
 
-## Project Workflow
+
 =======
 
 ## Project Workflow
@@ -124,7 +124,7 @@ When a new research project is requested:
    - START with open-ended questions about goals, expectations, and context
    - EXPLAIN to the user that you'll begin with a discussion phase to understand their needs
 
-### 2. Discussion Phase (PhaseD#)
+
 =======
 
 ### 2. Discussion Phase (PhaseD#)
