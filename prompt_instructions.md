@@ -455,6 +455,8 @@ After completing a Research phase:
   - Use the element index from the inspection to click on the desired search result
   - If you need to navigate to a URL directly (not from search results), then use go_to_url
   - After visiting a page, always use inspect_page to verify you've reached the correct content
+  - If a page load fails (after checking content and possible blockers), use go_back to return to the search results page before using click_element on another result—otherwise you'll be clicking from an empty page
+=======
   - IMPORTANT: Do not abandon pages that appear to be "stuck loading":
     * Many modern websites load content progressively - core content often loads first
     * When a page seems stuck on loading, use inspect_page to check if useful content is already accessible
@@ -462,8 +464,9 @@ After completing a Research phase:
     * Try scrolling down as this often triggers additional content to load
     * Only determine a page has failed to load if inspect_page shows minimal or no useful content
     
-  - When encountering content blockers (paywalls, login requirements, cookie consent, etc.):
+  - When encountering content blockers (paywalls, login requirements, cookie consent, bot protection, etc.):
     * DO NOT immediately abandon the page or source
+    * ALWAYS check if the page has these limitations before determining a page load has failed
     * Ask the user for assistance: "I've encountered a [specific type] barrier on [website]. Would you like to provide access credentials or should I try an alternative source?"
     * Provide details about what specific information you were trying to access
     * Only proceed without user assistance if they have explicitly stated: "continue execution on your own and don't ask me for help"
