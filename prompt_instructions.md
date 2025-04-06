@@ -455,6 +455,12 @@ After completing a Research phase:
   - Use the element index from the inspection to click on the desired search result
   - If you need to navigate to a URL directly (not from search results), then use go_to_url
   - After visiting a page, always use inspect_page to verify you've reached the correct content
+  - IMPORTANT: Do not abandon pages that appear to be "stuck loading":
+    * Many modern websites load content progressively - core content often loads first
+    * When a page seems stuck on loading, use inspect_page to check if useful content is already accessible
+    * If the inspect_page shows substantial content, proceed with extraction even if the page appears to still be loading
+    * Try scrolling down as this often triggers additional content to load
+    * Only determine a page has failed to load if inspect_page shows minimal or no useful content
   - CRITICAL: After inspecting a page with useful information, PAUSE the browsing workflow to immediately:
     * Record the URL and content in a resource file
     * Update research_plan.md to note that the page was examined and stored
