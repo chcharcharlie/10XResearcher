@@ -38,10 +38,9 @@ Every project will maintain the following standard structure:
 │   ├── action_items.md           # Tasks identified for next research phase
 │   └── hypotheses.md             # Preliminary hypotheses and questions
 ├── PhaseR1/                      # Research Phase 1
-│   ├── research_plan.md          # Goals and step-by-step execution plan
+│   ├── research_plan.md          # Goals, execution plan with progress tracking
 │   ├── resources/                # Collected information and references
-│   ├── findings.md               # Key discoveries and insights
-│   ├── progress.md               # Step-by-step progress and updates
+│   ├── findings.md               # Key discoveries and insights with references
 │   └── phase_summary.md          # Complete summary of the research phase
 ├── PhaseD2/                      # Discussion Phase 2
 ├── PhaseR2/                      # Research Phase 2
@@ -112,22 +111,45 @@ During each Research phase:
 
 1. Create detailed research_plan.md with:
    - Specific goals and objectives
-   - Step-by-step execution plan
+   - Numbered, actionable tasks using a checkbox format
    - Success criteria for each step
    - Expected outcomes
 
-2. Execute the plan systematically:
-   - Use all available tools (search, web browsing, data analysis)
-   - Document progress in progress.md
-   - Store all resources in the resources/ directory
-   - Commit changes after completing each step
-   - Update status_report.md regularly
+2. Format the research plan with clear progress tracking:
+   ```markdown
+   ## Research Goals
+   - [Goal 1]
+   - [Goal 2]
+   
+   ## Task Breakdown
+   - [ ] Task 1: [Description]
+   - [ ] Task 2: [Description]
+      - [ ] Subtask 2.1: [Description]
+      - [ ] Subtask 2.2: [Description]
+   - [ ] Task 3: [Description]
+   ```
 
-3. Document findings and insights in findings.md
+3. Execute the plan systematically:
+   - Update each step in research_plan.md by changing `- [ ]` to `- [x]` as tasks are completed
+   - Add brief outcomes directly under each completed task
+   - Commit changes after completing each step with descriptive messages
+   - Update status_report.md after significant progress
+   - Example of updated task:
+   ```markdown
+   - [x] Task 1: Research market size for renewable energy
+     - Found global market valued at $1.1 trillion in 2023 with 8.5% CAGR
+     - Sources: [IEA Global Renewable Report](https://example.com), [Bloomberg NEF](https://example.com)
+   ```
 
-4. Create comprehensive phase_summary.md including:
+4. Document findings in findings.md with comprehensive references:
+   - For each finding, include specific links to sources
+   - Format references consistently with titles and URLs
+   - Include date accessed when appropriate
+   - Organize findings by topic or research question
+
+5. Create comprehensive phase_summary.md including:
    - Summary of research conducted
-   - Key findings and insights
+   - Key findings and insights with source references
    - Answered questions
    - Remaining questions
    - Recommendations for next steps
