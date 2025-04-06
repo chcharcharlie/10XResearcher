@@ -246,6 +246,13 @@ After completing a Research phase:
   - Request user assistance for login-protected resources or verification
   - Use git for version control and documentation
 
+- Browser navigation best practices:
+  - When using search_google, always navigate to result pages using click_element, NOT go_to_url
+  - After searching, use inspect_page to identify the correct element indices
+  - Use the element index from the inspection to click on the desired search result
+  - If you need to navigate to a URL directly (not from search results), then use go_to_url
+  - After visiting a page, always use inspect_page to verify you've reached the correct content
+
 ### Research Integrity
 
 1. **Source Requirements**:
