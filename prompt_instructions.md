@@ -130,33 +130,57 @@ During each Research phase:
    - [ ] Task 3: [Description]
    ```
 
-3. Execute the plan systematically by completing ONE TASK AT A TIME:
+3. Execute the plan at the most granular level, working on ONE SUBTASK AT A TIME:
 
-   a. For each task in sequence:
-      - Announce the current task being worked on to the user
+   a. Break down each main task into smaller subtasks in the research plan:
+      ```markdown
+      - [ ] Task 1: Research market size for renewable energy
+        - [ ] Subtask 1.1: Find global market valuation and growth rate
+        - [ ] Subtask 1.2: Identify regional market distributions
+        - [ ] Subtask 1.3: Research forecasted trends through 2030
+      ```
+
+   b. For each subtask in sequence:
+      - Announce the specific subtask being worked on to the user
       - Use appropriate external research tools (search, browse web, analyze data) to find factual information
       - NEVER generate or fabricate data, statistics, or facts without verified sources
-      - For every piece of information gathered, record its source URL, publication, or database
-      - Complete only that single task with evidence-based research
+      - Complete only that single subtask with evidence-based research
       - IMMEDIATELY after completion:
-        * Update research_plan.md by changing `- [ ]` to `- [x]` for that specific task
-        * Add brief outcomes directly under the completed task with bullet points
+        * Update research_plan.md by changing `- [ ]` to `- [x]` for that specific subtask
+        * Add brief outcomes directly under the completed subtask with bullet points
         * Include specific sources with links for EVERY statement or finding
-        * Commit this change to git with a message describing the completed task
-      - Inform the user that the task has been completed and the plan has been updated
-      - Show the updated task to confirm completion
+        * Commit this change to git with a message describing the completed subtask
+      - Inform the user that the subtask has been completed and the plan has been updated
+      - Show the updated subtask to confirm completion
 
-   b. Example workflow:
-      1. "I'm now working on Task 1: Research market size for renewable energy"
+   c. Example workflow:
+      1. "I'm now working on Subtask 1.1: Find global market valuation and growth rate"
       2. *completes the research*
       3. *updates research_plan.md*:
       ```markdown
-      - [x] Task 1: Research market size for renewable energy
-        - Found global market valued at $1.1 trillion in 2023 with 8.5% CAGR
-        - Sources: [IEA Global Renewable Report](https://example.com), [Bloomberg NEF](https://example.com)
+      - [ ] Task 1: Research market size for renewable energy
+        - [x] Subtask 1.1: Find global market valuation and growth rate
+          - Found global market valued at $1.1 trillion in 2023 with 8.5% CAGR
+          - Sources: [IEA Global Renewable Report](https://example.com), [Bloomberg NEF](https://example.com)
+        - [ ] Subtask 1.2: Identify regional market distributions
+        - [ ] Subtask 1.3: Research forecasted trends through 2030
       ```
-      4. *commits the change*: "git add research_plan.md && git commit -m '[PhaseR1]: Complete task 1 - Market size research'"
-      5. "✅ Task 1 completed and research plan updated. Moving to Task 2."
+      4. *commits the change*: "git add research_plan.md && git commit -m '[PhaseR1]: Complete subtask 1.1 - Global market valuation'"
+      5. "✅ Subtask 1.1 completed and research plan updated. Moving to Subtask 1.2."
+
+   d. When all subtasks for a main task are complete, update the main task as well:
+      ```markdown
+      - [x] Task 1: Research market size for renewable energy
+        - [x] Subtask 1.1: Find global market valuation and growth rate
+          - Found global market valued at $1.1 trillion in 2023 with 8.5% CAGR
+          - Sources: [IEA Global Renewable Report](https://example.com), [Bloomberg NEF](https://example.com)
+        - [x] Subtask 1.2: Identify regional market distributions
+          - APAC region leads with 42% market share, followed by Europe (27%) and North America (21%)
+          - Source: [Market Analysis Institute Report](https://example.com)
+        - [x] Subtask 1.3: Research forecasted trends through 2030
+          - Market expected to reach $2.3 trillion by 2030, driven by policy incentives and cost reductions
+          - Source: [Industry Outlook Report](https://example.com)
+      ```
 
    c. Update status_report.md after completing a significant milestone (approximately every 3-5 tasks)
    
