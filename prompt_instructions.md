@@ -163,6 +163,9 @@ During each Research phase:
         |----------|-----|-------------|
         | resource1.md | https://example.com/page1 | IEA Renewable Energy Report |
         ```
+      - IMPORTANT: Each resource file must correspond to EXACTLY ONE URL
+      - Do NOT create resource files that aggregate or summarize multiple websites
+      - Each URL visited should have its own dedicated resource file if it contains useful information
 
    c. For each SUBTASK in sequence:
       - Announce the specific subtask being worked on to the user
@@ -187,6 +190,7 @@ During each Research phase:
           ```
       
       - IMMEDIATELY after finding a useful webpage (don't wait for subtask completion):
+        * PAUSE the browser workflow - do not continue browsing or clicking on more pages
         * Create a new file in the resources/ directory with an incremental filename (resource1.md, resource2.md, etc.)
         * At the top of the file, record the full URL and access date
         * Extract and store ALL potentially relevant sections for the ENTIRE research project, not just the current subtask
@@ -195,11 +199,13 @@ During each Research phase:
         * Organize the content with clear headings for different topics or sections
         * Add highlighting or notes to indicate key information
         * Update resource_index.md with the new entry and a thorough description of the content
+        * Each resource file must correspond to EXACTLY ONE webpage/URL
         * Update research_plan.md to mark the page as stored with its filename:
           ```markdown
           - Result 1: [Title] - [URL] - [Accessed: Yes] - [Page Examined: Timestamp] - [Stored as: resource1.md]
           ```
         * Do NOT commit after each resource - continue with the research process
+        * Only AFTER saving the resource, continue browsing if needed
       
       - Complete only that single subtask with evidence-based research
       - IMMEDIATELY after subtask completion:
@@ -236,7 +242,9 @@ During each Research phase:
             - Result 3: Energy Market Analysis - https://example.com/analysis - [Accessed: No]
       ```
       
-      3. *visits a page and updates research_plan.md again (no commit)*:
+      3. *visits a page, finds useful information, and PAUSES browsing*
+      
+      4. *updates research_plan.md to mark the page as visited (no commit)*:
       ```markdown
       - [ ] Task 1: Research market size for renewable energy
         - [ ] Subtask 1.1: Find global market valuation and growth rate
@@ -246,7 +254,7 @@ During each Research phase:
             - Result 3: Energy Market Analysis - https://example.com/analysis - [Accessed: No]
       ```
       
-      4. *immediately after finding useful information, stores it and updates research_plan.md (no commit)*:
+      5. *while browsing is PAUSED, immediately stores the content and updates research_plan.md (no commit)*:
       ```markdown
       - [ ] Task 1: Research market size for renewable energy
         - [ ] Subtask 1.1: Find global market valuation and growth rate
@@ -256,9 +264,9 @@ During each Research phase:
             - Result 3: Energy Market Analysis - https://example.com/analysis - [Accessed: No]
       ```
       
-      5. *repeats for other search results as needed*
+      6. *ONLY after saving the resource, continues browsing as needed and repeats steps 3-5 for other results*
       
-      6. *after completing all research, finalizes the subtask in research_plan.md*:
+      7. *after completing all research, finalizes the subtask in research_plan.md*:
       ```markdown
       - [ ] Task 1: Research market size for renewable energy
         - [x] Subtask 1.1: Find global market valuation and growth rate
@@ -274,9 +282,9 @@ During each Research phase:
         - [ ] Subtask 1.3: Research forecasted trends through 2030
       ```
       
-      7. *commits ALL changes at subtask completion*: "git add research_plan.md resources/ && git commit -m '[PhaseR1]: Complete subtask 1.1 - Global market valuation'"
+      8. *commits ALL changes at subtask completion*: "git add research_plan.md resources/ && git commit -m '[PhaseR1]: Complete subtask 1.1 - Global market valuation'"
       
-      8. "✅ Subtask 1.1 completed and research plan updated. During this subtask:
+      9. "✅ Subtask 1.1 completed and research plan updated. During this subtask:
          - Conducted 1 Google search with 3 results
          - Examined 2 pages 
          - Stored 2 resources
@@ -379,6 +387,11 @@ After completing a Research phase:
   - Use the element index from the inspection to click on the desired search result
   - If you need to navigate to a URL directly (not from search results), then use go_to_url
   - After visiting a page, always use inspect_page to verify you've reached the correct content
+  - CRITICAL: After inspecting a page with useful information, PAUSE the browsing workflow to immediately:
+    * Record the URL and content in a resource file
+    * Update research_plan.md to note that the page was examined and stored
+    * Only after storing the information, continue with browsing if needed
+  - NEVER continue browsing multiple pages without storing the content from each useful page
 
 ### Research Integrity
 
