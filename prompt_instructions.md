@@ -178,7 +178,7 @@ During each Research phase:
               - Result 1: [Title] - [URL] - [Accessed: Yes/No]
               - Result 2: [Title] - [URL] - [Accessed: Yes/No]
           ```
-        * Commit this update to maintain search history: "git add research_plan.md && git commit -m '[PhaseR#]: Record search for [topic]'"
+        * Do NOT commit after each search - continue with the research process
       
       - For EACH webpage visited (whether useful or not):
         * Update research_plan.md to record the visit under the appropriate search result:
@@ -199,7 +199,7 @@ During each Research phase:
           ```markdown
           - Result 1: [Title] - [URL] - [Accessed: Yes] - [Page Examined: Timestamp] - [Stored as: resource1.md]
           ```
-        * Commit the resource file with message describing the source: "git add resources/resource*.md resources/resource_index.md research_plan.md && git commit -m '[PhaseR#]: Store resource from [domain] about [topic]'"
+        * Do NOT commit after each resource - continue with the research process
       
       - Complete only that single subtask with evidence-based research
       - IMMEDIATELY after subtask completion:
@@ -215,7 +215,7 @@ During each Research phase:
             - Found global market valued at $1.1 trillion in 2023 with 8.5% CAGR
             - Sources: [IEA Global Renewable Report](../resources/resource1.md), [Bloomberg NEF](../resources/resource2.md)
           ```
-        * Commit these changes to git with a message describing the completed subtask: "git add research_plan.md && git commit -m '[PhaseR#]: Complete subtask [number] - [description]'"
+        * Commit ALL changes since beginning the subtask: "git add research_plan.md resources/ && git commit -m '[PhaseR#]: Complete subtask [number] - [description]'"
       - Inform the user that the subtask has been completed and the plan has been updated
       - Provide a summary of resources collected during the subtask:
         * Number of searches conducted
@@ -226,7 +226,7 @@ During each Research phase:
    c. Example workflow:
       1. "I'm now working on Subtask 1.1: Find global market valuation and growth rate"
       
-      2. *conducts a search and immediately updates research_plan.md*:
+      2. *conducts a search and immediately updates research_plan.md (no commit)*:
       ```markdown
       - [ ] Task 1: Research market size for renewable energy
         - [ ] Subtask 1.1: Find global market valuation and growth rate
@@ -236,7 +236,7 @@ During each Research phase:
             - Result 3: Energy Market Analysis - https://example.com/analysis - [Accessed: No]
       ```
       
-      3. *visits a page and updates research_plan.md again*:
+      3. *visits a page and updates research_plan.md again (no commit)*:
       ```markdown
       - [ ] Task 1: Research market size for renewable energy
         - [ ] Subtask 1.1: Find global market valuation and growth rate
@@ -246,7 +246,7 @@ During each Research phase:
             - Result 3: Energy Market Analysis - https://example.com/analysis - [Accessed: No]
       ```
       
-      4. *immediately after finding useful information, stores it and updates research_plan.md*:
+      4. *immediately after finding useful information, stores it and updates research_plan.md (no commit)*:
       ```markdown
       - [ ] Task 1: Research market size for renewable energy
         - [ ] Subtask 1.1: Find global market valuation and growth rate
@@ -274,7 +274,7 @@ During each Research phase:
         - [ ] Subtask 1.3: Research forecasted trends through 2030
       ```
       
-      7. *commits the changes*: "git add research_plan.md && git commit -m '[PhaseR1]: Complete subtask 1.1 - Global market valuation'"
+      7. *commits ALL changes at subtask completion*: "git add research_plan.md resources/ && git commit -m '[PhaseR1]: Complete subtask 1.1 - Global market valuation'"
       
       8. "✅ Subtask 1.1 completed and research plan updated. During this subtask:
          - Conducted 1 Google search with 3 results
