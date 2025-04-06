@@ -40,6 +40,9 @@ Every project will maintain the following standard structure:
 ├── PhaseR1/                      # Research Phase 1
 │   ├── research_plan.md          # Goals, execution plan with progress tracking
 │   ├── resources/                # Collected information and references
+│   │   ├── resource_index.md     # Index mapping filenames to URLs
+│   │   ├── resource1.md          # Stored webpage content with URL and relevant sections
+│   │   └── resource2.md          # Additional stored webpage content
 │   ├── findings.md               # Key discoveries and insights with references
 │   └── phase_summary.md          # Complete summary of the research phase
 ├── PhaseD2/                      # Discussion Phase 2
@@ -140,15 +143,33 @@ During each Research phase:
         - [ ] Subtask 1.3: Research forecasted trends through 2030
       ```
 
-   b. For each SUBTASK in sequence:
+   b. Initialize resource management:
+      - Create resources/resource_index.md with the following format:
+        ```markdown
+        # Resource Index
+        
+        | Filename | URL | Description |
+        |----------|-----|-------------|
+        | resource1.md | https://example.com/page1 | IEA Renewable Energy Report |
+        ```
+
+   c. For each SUBTASK in sequence:
       - Announce the specific subtask being worked on to the user
-      - Use appropriate external research tools (search, browse web, analyze data) to find factual information
-      - NEVER generate or fabricate data, statistics, or facts without verified sources
+      - Before browsing to a URL, check resource_index.md to see if it's already been accessed
+      - If URL exists in index, review the stored resource file instead of browsing again
+      - If URL is new, use appropriate external research tools to find factual information
+      - For each useful webpage found:
+        * Create a new file in the resources/ directory with an incremental filename (resource1.md, resource2.md, etc.)
+        * At the top of the file, record the full URL and access date
+        * Extract and store relevant sections of content from the webpage that are useful for the research
+        * Add highlighting or notes to indicate key information
+        * Update resource_index.md with the new entry
+        * Commit the resource file with message describing the source
       - Complete only that single subtask with evidence-based research
       - IMMEDIATELY after completion:
         * Update research_plan.md by changing `- [ ]` to `- [x]` for that specific subtask
         * Add brief outcomes directly under the completed subtask with bullet points
-        * Include specific sources with links for EVERY statement or finding
+        * Reference specific resource files (not just direct URLs) for EVERY statement or finding
         * Commit this change to git with a message describing the completed subtask
       - Inform the user that the subtask has been completed and the plan has been updated
       - Show the updated subtask to confirm completion
@@ -189,9 +210,10 @@ During each Research phase:
    e. NEVER proceed to the next subtask without completing, documenting, and committing the current subtask
 
 4. Document findings in findings.md with comprehensive references:
-   - For each finding, include specific links to sources
-   - Format references consistently with titles and URLs
-   - Include date accessed when appropriate
+   - For each finding, reference the appropriate resource files stored in the resources/ directory
+   - Format as: "According to [Resource Name](../resources/resource1.md), the market is growing at 8.5% annually."
+   - Include links to the specific resource files, not direct external URLs
+   - Ensure all facts can be traced back to stored resource files
    - Organize findings by topic or research question
 
 5. Create comprehensive phase_summary.md including:
