@@ -140,7 +140,7 @@ During each Research phase:
         - [ ] Subtask 1.3: Research forecasted trends through 2030
       ```
 
-   b. For each subtask in sequence:
+   b. For each SUBTASK in sequence:
       - Announce the specific subtask being worked on to the user
       - Use appropriate external research tools (search, browse web, analyze data) to find factual information
       - NEVER generate or fabricate data, statistics, or facts without verified sources
@@ -186,7 +186,7 @@ During each Research phase:
    
    d. NEVER work on multiple tasks simultaneously
    
-   e. NEVER proceed to the next task without completing, documenting, and committing the current task
+   e. NEVER proceed to the next subtask without completing, documenting, and committing the current subtask
 
 4. Document findings in findings.md with comprehensive references:
    - For each finding, include specific links to sources
