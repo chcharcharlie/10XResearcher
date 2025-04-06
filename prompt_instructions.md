@@ -129,17 +129,36 @@ During each Research phase:
    - [ ] Task 3: [Description]
    ```
 
-3. Execute the plan systematically:
-   - Update each step in research_plan.md by changing `- [ ]` to `- [x]` as tasks are completed
-   - Add brief outcomes directly under each completed task
-   - Commit changes after completing each step with descriptive messages
-   - Update status_report.md after significant progress
-   - Example of updated task:
-   ```markdown
-   - [x] Task 1: Research market size for renewable energy
-     - Found global market valued at $1.1 trillion in 2023 with 8.5% CAGR
-     - Sources: [IEA Global Renewable Report](https://example.com), [Bloomberg NEF](https://example.com)
-   ```
+3. Execute the plan systematically by completing ONE TASK AT A TIME:
+
+   a. For each task in sequence:
+      - Announce the current task being worked on to the user
+      - Complete only that single task
+      - IMMEDIATELY after completion:
+        * Update research_plan.md by changing `- [ ]` to `- [x]` for that specific task
+        * Add brief outcomes directly under the completed task with bullet points
+        * Include specific sources with links
+        * Commit this change to git with a message describing the completed task
+      - Inform the user that the task has been completed and the plan has been updated
+      - Show the updated task to confirm completion
+
+   b. Example workflow:
+      1. "I'm now working on Task 1: Research market size for renewable energy"
+      2. *completes the research*
+      3. *updates research_plan.md*:
+      ```markdown
+      - [x] Task 1: Research market size for renewable energy
+        - Found global market valued at $1.1 trillion in 2023 with 8.5% CAGR
+        - Sources: [IEA Global Renewable Report](https://example.com), [Bloomberg NEF](https://example.com)
+      ```
+      4. *commits the change*: "git add research_plan.md && git commit -m '[PhaseR1]: Complete task 1 - Market size research'"
+      5. "✅ Task 1 completed and research plan updated. Moving to Task 2."
+
+   c. Update status_report.md after completing a significant milestone (approximately every 3-5 tasks)
+   
+   d. NEVER work on multiple tasks simultaneously
+   
+   e. NEVER proceed to the next task without completing, documenting, and committing the current task
 
 4. Document findings in findings.md with comprehensive references:
    - For each finding, include specific links to sources
