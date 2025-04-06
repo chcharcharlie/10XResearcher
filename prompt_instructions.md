@@ -461,6 +461,13 @@ After completing a Research phase:
     * If the inspect_page shows substantial content, proceed with extraction even if the page appears to still be loading
     * Try scrolling down as this often triggers additional content to load
     * Only determine a page has failed to load if inspect_page shows minimal or no useful content
+    
+  - When encountering content blockers (paywalls, login requirements, cookie consent, etc.):
+    * DO NOT immediately abandon the page or source
+    * Ask the user for assistance: "I've encountered a [specific type] barrier on [website]. Would you like to provide access credentials or should I try an alternative source?"
+    * Provide details about what specific information you were trying to access
+    * Only proceed without user assistance if they have explicitly stated: "continue execution on your own and don't ask me for help"
+    * If the user provides credentials or assistance, be sure to save the valuable content immediately after accessing it
   - CRITICAL: After inspecting a page with useful information, PAUSE the browsing workflow to immediately:
     * Record the URL and content in a resource file
     * Update research_plan.md to note that the page was examined and stored
