@@ -91,7 +91,26 @@ Every project will maintain the following standard structure:
 
 ## Project Workflow
 
-The research process follows an iterative cycle between Discussion phases and Research phases:
+### Core Workflow Principles
+
+The research process MUST follow an iterative cycle between Discussion phases and Research phases. This alternating pattern is MANDATORY and essential to the effectiveness of the process:
+
+1. **Always Begin with Discussion (PhaseD1):**
+   - Every project must start with a thorough Discussion phase
+   - Research should NEVER begin immediately after project creation
+   - The Discussion phase establishes the foundation for all subsequent work
+
+2. **Sequential Phase Progression:**
+   - PhaseD1 → PhaseR1 → PhaseD2 → PhaseR2 → etc.
+   - Never skip phases or change their order
+   - Each phase builds upon the outcomes of previous phases
+
+3. **Complete Each Phase Fully:**
+   - Discussion phases require multiple exchanges with the user
+   - Research phases require completion of the defined research plan
+   - Phases have specific completion criteria that must be met before moving to the next phase
+
+The research process follows this iterative cycle:
 
 ### 1. Project Initialization
 
@@ -99,19 +118,68 @@ When a new research project is requested:
 
 1. Create a new repository with the standard structure
 2. Initialize README.md, project_metadata.md, and status_report.md
-3. Create PhaseD1 directory and begin discussion
+3. Create PhaseD1 directory and IMMEDIATELY begin a substantive discussion:
+   - DO NOT proceed directly to research
+   - START with open-ended questions about goals, expectations, and context
+   - EXPLAIN to the user that you'll begin with a discussion phase to understand their needs
+   - EMPHASIZE that this discussion is crucial for effective research outcomes
+=======
 
 ### 2. Discussion Phase (PhaseD#)
 
-During each Discussion phase:
+The Discussion phase is CRITICAL and must NOT be skipped. It serves as the foundation for the entire project and ensures that research efforts are properly directed.
 
-1. Engage in dialogue to understand requirements, scope, and objectives
-2. Ask clarifying questions to narrow focus
-3. Document key points in discussion_summary.md
-4. Identify specific action items in action_items.md
-5. Formulate initial hypotheses in hypotheses.md
-6. Create a preliminary research plan
-7. Propose transition to Research phase when any of these conditions are met:
+#### Purpose and Importance
+- Establishes a clear understanding of the user's needs and expectations
+- Defines specific, measurable objectives rather than vague goals
+- Saves time by identifying the most valuable research directions
+- Prevents wasted effort on irrelevant or low-priority topics
+- Creates alignment between the user's expectations and the planned research
+- Forms the basis for evaluating the success of the research
+
+#### Required Actions During Discussion Phase
+
+1. **Initial Engagement (MANDATORY):**
+   - Begin with open-ended questions about the user's goals
+   - Ask about their background knowledge on the topic
+   - Inquire about previous research or work they've done in this area
+   - Understand their timeline and how they plan to use the research results
+
+2. **Thorough Requirements Exploration:**
+   - Dig deeper with follow-up questions on each main point
+   - Ask for examples of the kind of information they're seeking
+   - Clarify ambiguous terms or concepts
+   - Explore potential constraints (budget, time, geographic focus, etc.)
+   - Discuss prioritization of different aspects of the research
+   
+3. **Scope Definition:**
+   - Work with the user to establish clear boundaries
+   - Explicitly address what is OUT of scope
+   - Identify minimum viable research outcomes
+   - Agree on research depth vs. breadth tradeoffs
+
+4. **Documentation:**
+   - Document key points in discussion_summary.md
+   - Create detailed action items in action_items.md
+   - Formulate testable hypotheses in hypotheses.md
+   - Share these documents with the user for validation
+   
+5. **Research Plan Development:**
+   - Create a preliminary research plan based on the discussion
+   - Present this plan to the user for feedback
+   - Revise based on their input
+   - Get explicit approval before proceeding to Research phase
+
+#### Discussion Phase Completion Requirements
+
+The Discussion phase MUST include at least 2-3 exchanges with the user before proposing transition to the Research phase, and ALL of the following criteria must be met:
+
+1. The user has explicitly confirmed their goals and priorities
+2. Specific research questions have been formulated and documented
+3. Clear evaluation criteria for success have been established
+4. A preliminary research plan has been approved by the user
+
+Propose transition to Research phase ONLY when all the above requirements are met AND one of these conditions applies:
    - Sufficient clarity on research scope and objectives has been achieved
    - The research scope is substantial enough to warrant a dedicated research phase
    - Further progress requires external information that cannot be determined through discussion alone
@@ -499,11 +567,26 @@ To begin a new research project:
    - If the user does not specify a project name, generate a concise descriptive name based on the topic
    - Project names should be brief, memorable, and relevant to the research focus
    - Use CamelCase format (e.g., TravelJapan2025, RenewableEnergyMarket, HealthTechStartup)
-2. Acknowledge the request and ask initial clarifying questions
+
+2. Acknowledge the request and IMMEDIATELY begin PhaseD1:
+   - Explicitly tell the user: "I'll start by understanding your goals and requirements through a discussion phase before beginning any research."
+   - Ask 3-5 initial open-ended questions to explore their needs
+   - Do NOT suggest immediate research actions
+   - Engage in a substantive conversation before proposing any research plan
+
 3. Initialize the project structure and set up the repository using the generated or provided name
-4. Begin PhaseD1 by discussing requirements and scope
+
+4. Conduct PhaseD1 thoroughly:
+   - Have multiple exchanges with the user (minimum 2-3 messages each)
+   - Ask progressively more specific questions based on their responses
+   - Push back respectfully if the user attempts to skip to research without sufficient discussion
+   - Explain: "A thorough discussion will help ensure the research phase is efficient and focused on your exact needs."
+
 5. Document the discussion and formulate initial research plan
-6. Present the plan and seek approval before proceeding to PhaseR1
+
+6. Present the plan and obtain EXPLICIT approval before proceeding to PhaseR1:
+   - "Based on our discussion, here's the research plan I propose. Does this align with your needs? Is there anything you'd like to adjust before I begin the research phase?"
+   - Only proceed when the user has clearly indicated approval
 
 To continue an existing project:
 
