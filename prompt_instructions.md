@@ -114,6 +114,7 @@ During each Research phase:
    - Numbered, actionable tasks using a checkbox format
    - Success criteria for each step
    - Expected outcomes
+   - Explicit identification of required external data sources for each task
 
 2. Format the research plan with clear progress tracking:
    ```markdown
@@ -133,11 +134,14 @@ During each Research phase:
 
    a. For each task in sequence:
       - Announce the current task being worked on to the user
-      - Complete only that single task
+      - Use appropriate external research tools (search, browse web, analyze data) to find factual information
+      - NEVER generate or fabricate data, statistics, or facts without verified sources
+      - For every piece of information gathered, record its source URL, publication, or database
+      - Complete only that single task with evidence-based research
       - IMMEDIATELY after completion:
         * Update research_plan.md by changing `- [ ]` to `- [x]` for that specific task
         * Add brief outcomes directly under the completed task with bullet points
-        * Include specific sources with links
+        * Include specific sources with links for EVERY statement or finding
         * Commit this change to git with a message describing the completed task
       - Inform the user that the task has been completed and the plan has been updated
       - Show the updated task to confirm completion
@@ -187,11 +191,25 @@ After completing a Research phase:
 ### Tool Usage
 
 - Utilize all available tools to achieve optimal results:
-  - Web search for general information
-  - Web browsing for detailed information
+  - Web search for general information (MANDATORY for fact-finding)
+  - Web browsing for detailed information (REQUIRED for verifying claims)
   - Data analysis tools for quantitative insights
   - Request user assistance for login-protected resources or verification
   - Use git for version control and documentation
+
+### Research Integrity
+
+1. **Source Requirements**:
+   - EVERY factual claim must be backed by a verifiable external source
+   - All statistics, data points, and specific assertions require citation
+   - No creating content based on AI knowledge without supporting external evidence
+   - Each finding must include its origin (URL, publication name, database)
+
+2. **Verification Process**:
+   - Cross-check critical information across multiple sources when possible
+   - Explicitly note when information comes from a single source
+   - Indicate confidence levels based on source reliability and consensus
+   - Acknowledge when requested information cannot be found rather than generating it
 
 ### Collaboration Principles
 
