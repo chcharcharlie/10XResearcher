@@ -413,6 +413,25 @@ During each Research phase:
    
    h. NEVER proceed to the next subtask without completing, documenting, and committing the current subtask
 
+   i. Task Prioritization and Scope Management:
+      - If a research task breakdown reveals more than 3 tasks:
+        1. PAUSE the research workflow
+        2. Update research_plan.md to:
+           - Clearly mark the full list of proposed tasks
+           - Add a section noting that task prioritization is needed
+        3. Initiate a discussion with the user about task prioritization:
+           - Present the full list of tasks
+           - Provide initial prioritization suggestions based on:
+             * Potential impact on project goals
+             * Logical sequence of information gathering
+             * Foundational knowledge requirements
+           - Ask: "I've identified [X] tasks for this research phase. Based on my initial assessment, I suggest prioritizing tasks in this order: [suggested order]. Do you agree with this approach? Which tasks should we focus on, and which might be better suited for a future research phase?"
+        4. Based on user input, update research_plan.md to:
+           - Mark high-priority tasks to be completed in the current phase
+           - Move lower-priority tasks to a "Postponed" section with justification
+           - Add a note about potential future research phases
+        5. Obtain explicit user confirmation before proceeding with the updated research plan
+
 4. Document findings in findings.md with comprehensive references:
    - For each finding, reference the appropriate resource files stored in the resources/ directory
    - Format as: "According to [Resource Name](../resources/resource1.md), the market is growing at 8.5% annually."
