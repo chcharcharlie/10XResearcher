@@ -195,6 +195,10 @@ mkdir -p ~/claude_space/research
 - [prompt_instructions.md](./prompt_instructions.md) - 核心提示系统
 - [example_project](./example_project/) - 示例研究项目结构
 
+## 支持和反馈
+
+对于功能请求、错误报告或一般讨论，请联系[Twitter上的@chcharcharlie](https://twitter.com/chcharcharlie)。
+
 ## 许可证
 
 本项目根据MIT许可证授权 - 详见[LICENSE](./LICENSE)文件。

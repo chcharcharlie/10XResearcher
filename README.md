@@ -195,6 +195,10 @@ All research is stored in local git repositories with detailed documentation.
 - [prompt_instructions.md](./prompt_instructions.md) - The core prompt system
 - [example_project](./example_project/) - Sample research project structure
 
+## Support and Feedback
+
+For feature requests, bug reports, or general discussions, please contact [@chcharcharlie on Twitter](https://twitter.com/chcharcharlie).
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
