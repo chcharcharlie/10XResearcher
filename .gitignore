@@ -1,0 +1,25 @@
+# Git directories
+.git/
+
+# macOS system files
+.DS_Store
+**/.DS_Store
+
+# Node modules
+node_modules/
+
+# Python virtual environments
+venv/
+env/
+.env/
+
+# Cache directories
+__pycache__/
+.pytest_cache/
+.coverage
+.cache/
+
+# Build artifacts
+dist/
+build/
+*.log

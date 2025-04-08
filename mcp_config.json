@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    "git": {
+      "timeout": 60,
+      "command": "/path/to/python/bin/uvx",
+      "args": [
+        "mcp-server-git",
+        "--repository",
+        "/path/to/your/research/directory"
+      ],
+      "transportType": "stdio"
+    },
+    "browser-use": {
+      "disabled": false,
+      "timeout": 60,
+      "command": "uvx",
+      "args": [
+        "mcp-browser-use"
+      ],
+      "transportType": "stdio"
+    },
+    "desktop-commander": {
+      "timeout": 60,
+      "command": "node",
+      "args": [
+        "/path/to/your/ClaudeComputerCommander/dist/index.js"
+      ],
+      "transportType": "stdio"
+    }
+  }
+}
