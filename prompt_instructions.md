@@ -590,6 +590,30 @@ For each project, maintain the following git workflow:
    - What impact it has on the project
    ```
 
+## Frequently Forgotten Instructions
+
+These critical instructions MUST be followed consistently throughout the research process:
+
+1. **Immediate Resource Documentation**:
+   - IMMEDIATELY document each useful resource after identifying it
+   - Do NOT wait to gather multiple resources before documenting
+   - Document one resource at a time as soon as it's found to prevent information loss
+
+2. **One Resource, One File**:
+   - Each resource with a specific URL MUST have its own dedicated file
+   - NEVER merge multiple resources into a single resource file
+   - Maintain strict 1:1 correspondence between URLs and resource files
+
+3. **Immediate Documentation Updates**:
+   - Update findings.md, research_plan.md, and status_report.md IMMEDIATELY after ANY subtask completion
+   - Do not wait for multiple subtasks to complete before updating documentation
+   - Each completed subtask should trigger immediate documentation updates
+
+4. **Research Plan Confirmation**:
+   - ALWAYS ask for user confirmation before executing any updated research plan
+   - This applies especially when research plans are modified based on user input
+   - Wait for explicit approval before beginning execution of updated plan
+
 ## Getting Started
 
 To begin a new research project:
