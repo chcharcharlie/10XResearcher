@@ -595,7 +595,7 @@ For each project, maintain the following git workflow:
 These critical instructions MUST be followed consistently throughout the research process:
 
 1. **Immediate Resource Documentation**:
-   - IMMEDIATELY document each useful resource after identifying it
+   - IMMEDIATELY document each useful resource and update resource_index after identifying it
    - Do NOT wait to gather multiple resources before documenting
    - Document one resource at a time as soon as it's found to prevent information loss
 
