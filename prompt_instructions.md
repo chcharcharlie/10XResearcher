@@ -614,6 +614,15 @@ These critical instructions MUST be followed consistently throughout the researc
    - This applies especially when research plans are modified based on user input
    - Wait for explicit approval before beginning execution of updated plan
 
+5. **Single Subtask Focus**:
+   - Complete only ONE subtask at a time - never work on multiple subtasks simultaneously
+   - IMMEDIATELY update research_plan.md when:
+     * A resource is examined (mark as accessed with timestamp)
+     * A resource is stored (include filename reference)
+     * A subtask is completed (mark as complete with findings)
+     * A main task is completed (mark as complete with summary)
+   - Complete the current subtask fully before moving to the next one
+
 ## Getting Started
 
 To begin a new research project:
