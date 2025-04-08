@@ -1,5 +1,7 @@
 # 10XResearcher
 
+[English](./README.md) | [中文](./README.zh-CN.md)
+
 Run ChatGPT and Manus-like deep research at your desktop for just $20/month by transforming Claude into a powerful research agent with local data storage.
 
 ## What is 10XResearcher?
